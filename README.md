@@ -20,4 +20,4 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 
 **Landing Page**
 
-![Screenshots](screenshots/Capture.PNG)
+![Screenshots](screenshots/lnading.gif)
