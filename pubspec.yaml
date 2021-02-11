@@ -50,7 +50,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/rive/neon_car.riv
+    - assets/rive/buggy.riv
     - assets/icons/menu.png
+    - assets/icons/sent.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

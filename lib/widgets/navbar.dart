@@ -33,11 +33,15 @@ class NavBar extends StatelessWidget {
                     colors: [
                       Color(0xFFC86DD7),
                       Color(0xFF3023AE),
-                    ], begin: Alignment.bottomRight, end: Alignment.topLeft)),
+                    ], begin: Alignment.bottomRight, end: Alignment.topLeft
+                  )
+                ),
                 child: Center(
                   child: Text(
                     "B",
-                    style: TextStyle(fontSize: 30, color: Colors.white)),
+                    style: TextStyle(fontSize: 30, color: Colors.white
+                    )
+                  ),
                 ),
               ),
               SizedBox(
@@ -51,14 +55,15 @@ class NavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[...navItem()]..add(InkWell(
               child: Container(
-              margin: EdgeInsets.only(left: 20),
-              width: 120,
-              height: 40,
+                margin: EdgeInsets.only(left: 20),
+                width: 120,
+                height: 40,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Color(0xFFC86DD7), Color(0xFF3023AE)],
                   begin: Alignment.bottomRight,
-                  end: Alignment.topLeft),
+                  end: Alignment.topLeft
+                ),
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
