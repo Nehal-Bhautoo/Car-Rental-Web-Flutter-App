@@ -1,6 +1,7 @@
 # Car Rental Web App
 
-[![CodeFactor](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app/badge?s=71a73e249d8142cf2e38f7c51e952c14242a4827)](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app)
+[![CodeFactor](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app/badge?s=71a73e249d8142cf2e38f7c51e952c14242a4827)](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app) 
+<img alt="dart" src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"> <img alt="flutter" src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
 
 ## Description
 
