@@ -16,7 +16,8 @@ This project is a web application created using Flutter. The web app also make u
 [Rive](https://rive.app/) is a real-time interactive design tool that allows you to design, animate, and immediately integrate your assets into any platform thanks to our open source runtimes.
 Rive has various implementation, but the one used in this project [Rive-Flutter](https://github.com/rive-app/rive-flutter)
 
-### Database Design
+## Front-End Design
 
-## Screenshots
+**Landing Page**
 
+![Screenshots](screenshots/Capture.PNG)
