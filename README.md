@@ -1,5 +1,7 @@
 # Car Rental Web App
 
+[![CodeFactor](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app/badge?s=71a73e249d8142cf2e38f7c51e952c14242a4827)](https://www.codefactor.io/repository/github/nehal-bhautoo/car-rental-web-flutter-app)
+
 ## Description
 
 This project is a web application created using Flutter. The web app also make use of Rive animation assets and dependencies.
