@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:rive/rive.dart';
+import '../login/login_mobile_screen.dart';
+import '../login/login_desktop_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -26,10 +29,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-
-      ),
+    return ScreenTypeLayout(
+      mobile: LoginMobile(),
+      desktop: LoginDesktop(),
     );
   }
 }
