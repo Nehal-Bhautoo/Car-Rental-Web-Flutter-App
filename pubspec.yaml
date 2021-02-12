@@ -51,6 +51,7 @@ flutter:
   assets:
     - assets/rive/neon_car.riv
     - assets/rive/buggy.riv
+    - assets/rive/landing.riv
     - assets/icons/menu.png
     - assets/icons/sent.png
 
