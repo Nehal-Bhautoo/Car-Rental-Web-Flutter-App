@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:rive/rive.dart';
 import '../login/login_mobile_screen.dart';
 import '../login/login_desktop_screen.dart';
 
@@ -11,22 +9,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Artboard _riveArtboard;
-  RiveAnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    rootBundle.load('rive/neon_car.riv').then((data) async {
-      final file = RiveFile();
-      if(file.import(data)) {
-        final artboard = file.mainArtboard;
-        artboard.addController(_controller = SimpleAnimation('drive'));
-        setState(() => _riveArtboard = artboard);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
@@ -35,5 +17,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-// child: _riveArtboard == null ? const SizedBox() : Rive(artboard: _riveArtboard),

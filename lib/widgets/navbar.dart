@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/login/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/responsiveLayout.dart';
@@ -75,7 +76,9 @@ class NavBar extends StatelessWidget {
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    LoginScreen();
+                  },
                   child: Center(
                     child: Text(
                       "Login",
