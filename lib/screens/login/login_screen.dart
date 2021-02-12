@@ -28,8 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: _riveArtboard == null ? const SizedBox() : Rive(artboard: _riveArtboard),
+
       ),
     );
   }
 }
+
+// child: _riveArtboard == null ? const SizedBox() : Rive(artboard: _riveArtboard),

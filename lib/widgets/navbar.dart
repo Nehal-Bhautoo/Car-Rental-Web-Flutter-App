@@ -74,15 +74,18 @@ class NavBar extends StatelessWidget {
               ),
               child: Material(
                 color: Colors.transparent,
-                child: Center(
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      letterSpacing: 1,
-                      fontFamily: "Montserrat-Bold"
-                    )
+                child: InkWell(
+                  onTap: () {},
+                  child: Center(
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        letterSpacing: 1,
+                        fontFamily: "Montserrat-Bold"
+                      )
+                    ),
                   ),
                 ),
               ),
