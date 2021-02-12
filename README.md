@@ -25,3 +25,7 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 **Landing Page**
 
 ![Screenshots](screenshots/lnading.gif)
+
+**Login**
+
+![Screenshots](screenshots/login.gif)

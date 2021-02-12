@@ -39,7 +39,27 @@ class _LoginDesktopState extends State<LoginDesktop> {
               child: Padding(padding: EdgeInsets.all(35.0),
               child: Row(
                 children: <Widget>[
-                  Expanded(child: null),
+                  Expanded(child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 18.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          "Sign-In",
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 50.0),
+                        customTextField("Email", "you@example.com", Icons.mail, false),
+                        SizedBox(height: 25.0),
+                        customTextField("Password", "Enter Password", Icons.lock, true),
+                      ],
+                    ),
+                    )
+                  ),
                   Expanded(
                     flex: 2,
                     child: Center(
@@ -56,6 +76,29 @@ class _LoginDesktopState extends State<LoginDesktop> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget customTextField(String title, String hintText, IconData icon, bool isPassword) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 15,
+            color: Colors.black
+          ),
+        ),
+        TextFormField(
+          obscureText: isPassword,
+          decoration: InputDecoration(
+            hintText: hintText,
+            prefixIcon: Icon(icon)
+          ),
+        )
+      ],
     );
   }
 }
