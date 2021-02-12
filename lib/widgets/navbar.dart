@@ -77,7 +77,7 @@ class NavBar extends StatelessWidget {
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () {
-                    LoginScreen();
+
                   },
                   child: Center(
                     child: Text(
