@@ -45,21 +45,85 @@ class _LoginDesktopState extends State<LoginDesktop> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
-                          "Sign-In",
-                          style: TextStyle(
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.bold,
+                      Text(
+                        "Sign-In",
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 50.0),
+                      customTextField("Email", "you@example.com", Icons.mail, false),
+                      SizedBox(height: 25.0),
+                      customTextField("Password", "Enter Password", Icons.lock, true),
+                      SizedBox(height: 50.0),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text("Forgot Password?",
+                            style: TextStyle(
+                              color: Colors.deepPurple,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500
+                            ),
                           ),
                         ),
-                        SizedBox(height: 50.0),
-                        customTextField("Email", "you@example.com", Icons.mail, false),
-                        SizedBox(height: 25.0),
-                        customTextField("Password", "Enter Password", Icons.lock, true),
+                      ),
+                        SizedBox(height: 30.0),
+                      Container(
+                        width: double.infinity,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Theme.of(context).colorScheme.primary.withOpacity(0.5);
+                              return null; // Use the component's default.
+                              },
+                            ),
+                          ),
+                        onPressed: () {},
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
+                        )
+                      )),
+                      SizedBox(height: 23.0),
+                      Center(
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Don't have an account?",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                )
+                              ),
+                              TextSpan(
+                                text: "Sign-Up",
+                                style: TextStyle(
+                                  color: Colors.deepPurple,
+                                  fontSize: 18,
+                                )
+                              ),
+                            ]
+                          )
+                        ),
+                      )
                       ],
                     ),
                     )
                   ),
+                  SizedBox(width: 25.0),
                   Expanded(
                     flex: 2,
                     child: Center(

@@ -38,10 +38,9 @@ class NavBar extends StatelessWidget {
                   )
                 ),
                 child: Center(
-                  child: Text(
-                    "B",
-                    style: TextStyle(fontSize: 30, color: Colors.white
-                    )
+                  child: Icon(
+                    Icons.directions_car_rounded,
+                    color: Colors.white,
                   ),
                 ),
               ),
