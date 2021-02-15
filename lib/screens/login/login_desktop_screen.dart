@@ -1,4 +1,3 @@
-import 'package:car_rental/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
@@ -80,7 +79,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
                         ),
                         child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.deepPurple)
+                            backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
                           ),
                         onPressed: () {},
                         child: Text(

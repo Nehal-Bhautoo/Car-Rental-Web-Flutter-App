@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:rive/rive.dart';
 
 class LoginMobile extends StatefulWidget {
   @override
@@ -57,12 +54,7 @@ class _LoginMobileState extends State<LoginMobile> {
                   height: 50,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-                        if (states.contains(MaterialState.pressed))
-                          return Colors.deepPurpleAccent.withOpacity(0.5);
-                        return null; // Use the component's default.
-                      },
-                      ),
+                      backgroundColor: MaterialStateProperty.all(Colors.deepPurple)
                     ),
                     onPressed: () {},
                     child: Text(
