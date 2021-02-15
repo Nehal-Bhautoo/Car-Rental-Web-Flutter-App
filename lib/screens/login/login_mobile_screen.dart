@@ -57,13 +57,24 @@ class _LoginMobileState extends State<LoginMobile> {
                       backgroundColor: MaterialStateProperty.all(Colors.deepPurple)
                     ),
                     onPressed: () {},
-                    child: Text(
-                      "Sign In",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600
-                      ),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                        Center(
+                          child: Icon(
+                            Icons.login_rounded,
+                            color: Colors.deepPurple,
+                            size: 50,
+                          ),
+                        ),
+                      ],
                     )
                   )
                 ),

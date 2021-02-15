@@ -31,8 +31,9 @@ class _SignupDesktopState extends State<SignupDesktop> {
         child: Center(
           child: Card(
             elevation: 5,
-            margin: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+            margin: EdgeInsets.symmetric(horizontal: 90, vertical: 20),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
+            shadowColor: Colors.black,
             child: Container(
               width: double.infinity,
               height: 750.0,
@@ -40,17 +41,28 @@ class _SignupDesktopState extends State<SignupDesktop> {
               child: Row(
                 children: <Widget>[
                   Expanded(child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 18.0),
+                    padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
-                          "Sign-Up",
-                          style: TextStyle(
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              "Sign-Up",
+                              style: TextStyle(
+                                fontSize: 40.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Center(
+                              child: Icon(
+                                Icons.login_rounded,
+                                color: Colors.deepPurple,
+                                size: 50,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: 30.0),
                         customTextField("Username", "username", Icons.account_circle, false),
@@ -82,7 +94,7 @@ class _SignupDesktopState extends State<SignupDesktop> {
                             )
                           )
                         ),
-                        SizedBox(width: 25.0),
+                        SizedBox(height: 25.0),
                         Center(
                           child: RichText(
                             text: TextSpan(
@@ -108,7 +120,7 @@ class _SignupDesktopState extends State<SignupDesktop> {
                       ],
                     ),
                   )),
-                  SizedBox(width: 25.0),
+                  SizedBox(height: 23.0),
                   Expanded(
                     flex: 2,
                     child: Center(
