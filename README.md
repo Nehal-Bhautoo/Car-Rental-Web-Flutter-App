@@ -29,3 +29,7 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 **Login**
 
 ![Screenshots](screenshots/login.gif)
+
+**Sign-Up**
+
+![Screenshots](screenshots/sign-up.gif)

@@ -70,7 +70,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
                           ),
                         ),
                       ),
-                        SizedBox(height: 30.0),
+                      SizedBox(height: 30.0),
                       Container(
                         width: double.infinity,
                         height: 50,
