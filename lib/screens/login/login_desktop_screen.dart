@@ -1,3 +1,4 @@
+import 'package:car_rental/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
@@ -31,7 +32,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
         child: Center(
           child: Card(
             elevation: 5,
-            margin: EdgeInsets.symmetric(horizontal: 130, vertical: 25),
+            margin: EdgeInsets.symmetric(horizontal: 100, vertical: 25),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
             child: Container(
               width: double.infinity,
@@ -79,12 +80,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
                         ),
                         child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-                              if (states.contains(MaterialState.pressed))
-                                return Theme.of(context).colorScheme.primary.withOpacity(0.5);
-                              return null; // Use the component's default.
-                              },
-                            ),
+                            backgroundColor: MaterialStateProperty.all(Colors.deepPurple)
                           ),
                         onPressed: () {},
                         child: Text(
