@@ -76,7 +76,10 @@ class NavBar extends StatelessWidget {
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen())
+                    );
                   },
                   child: Center(
                     child: Text(
