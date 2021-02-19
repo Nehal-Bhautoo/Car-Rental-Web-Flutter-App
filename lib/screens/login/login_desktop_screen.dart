@@ -45,12 +45,23 @@ class _LoginDesktopState extends State<LoginDesktop> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                      Text(
-                        "Sign-In",
-                        style: TextStyle(
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            "Sign-In",
+                            style: TextStyle(
+                              fontSize: 40.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Center(
+                            child: Icon(
+                              Icons.login_rounded,
+                              color: Colors.deepPurple,
+                              size: 50,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(height: 50.0),
                       customTextField("Email", "you@example.com", Icons.mail, false),

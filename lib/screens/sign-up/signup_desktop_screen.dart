@@ -146,8 +146,8 @@ class _SignupDesktopState extends State<SignupDesktop> {
         Text(
           title,
           style: TextStyle(
-              fontSize: 15,
-              color: Colors.black
+            fontSize: 15,
+            color: Colors.black
           ),
         ),
         TextFormField(
