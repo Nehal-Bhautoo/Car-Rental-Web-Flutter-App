@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Car Rental',
+      //darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
