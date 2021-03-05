@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 class CarListScreen extends StatefulWidget {
   @override
@@ -20,8 +21,17 @@ class _CarListScreenState extends State<CarListScreen> {
             height: MediaQuery.of(context).size.height,
             width: 101.0,
             decoration: BoxDecoration(
-              color: Color(0xff332A7C),
+              color: Colors.deepPurple,
               borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  child: Column(
+
+                  ),
+                )
+              ],
             ),
           )
         ],
