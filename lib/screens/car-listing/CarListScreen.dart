@@ -68,14 +68,18 @@ class _NavBarItemState extends State<NavBarItem> {
       color: Colors.transparent,
       child: Stack(
         children: [
-          Container(),
+          Container(
+            child: CustomPaint(
+              painter: CurvePainter(),
+            ),
+          ),
           Container(
             height: 80.0,
             width: 101.0,
             child: Center(
               child: Icon(
                 widget.icon,
-                color: Colors.black,
+                color: Colors.black45,
                 size: 18.0,
               ),
             ),
@@ -84,4 +88,26 @@ class _NavBarItemState extends State<NavBarItem> {
       ),
     );
   }
+}
+
+class CurvePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    Path path = Path();
+    Paint paint = Paint();
+    
+    path.moveTo(101, 0);
+    path.quadraticBezierTo(101, 20, 75, 20);
+    path.lineTo(50, 20);
+    path.quadraticBezierTo(25, 20, 25, 40);
+    paint.color = Colors.white;
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    throw UnimplementedError();
+  }
+  
 }
