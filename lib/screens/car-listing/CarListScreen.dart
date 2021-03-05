@@ -8,6 +8,13 @@ class CarListScreen extends StatefulWidget {
 }
 
 class _CarListScreenState extends State<CarListScreen> {
+  List<IconData> icon = [
+    Feather.folder,
+    Feather.user,
+    Feather.monitor,
+    Feather.lock,
+    Feather.message_circle
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +35,49 @@ class _CarListScreenState extends State<CarListScreen> {
               children: [
                 Positioned(
                   child: Column(
-
+                    children: icon.map((e) => NavBarItem(icon: e)).toList(),
                   ),
                 )
               ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class NavBarItem extends StatefulWidget {
+  final IconData icon;
+  final Function onTap;
+  final bool selected;
+  NavBarItem({
+    this.icon,
+    this.onTap,
+    this.selected
+  });
+  @override
+  _NavBarItemState createState() => _NavBarItemState();
+}
+
+class _NavBarItemState extends State<NavBarItem> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 101.0,
+      color: Colors.transparent,
+      child: Stack(
+        children: [
+          Container(),
+          Container(
+            height: 80.0,
+            width: 101.0,
+            child: Center(
+              child: Icon(
+                widget.icon,
+                color: Colors.black,
+                size: 18.0,
+              ),
             ),
           )
         ],

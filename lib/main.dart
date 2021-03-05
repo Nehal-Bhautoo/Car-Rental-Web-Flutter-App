@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/car-listing/CarListScreen.dart';
 import 'package:car_rental/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage()
+        '/': (context) => CarListScreen()
       },
     );
   }
