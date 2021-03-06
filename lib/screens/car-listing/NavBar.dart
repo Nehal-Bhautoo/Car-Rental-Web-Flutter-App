@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
-class CarListScreen extends StatefulWidget {
+class NavBar extends StatefulWidget {
   @override
-  _CarListScreenState createState() => _CarListScreenState();
+  _NavBarState createState() => _NavBarState();
 }
 List<bool> selected = [true, false, false, false, false];
-class _CarListScreenState extends State<CarListScreen> {
+class _NavBarState extends State<NavBar> {
   List<IconData> icon = [
     Feather.folder,
     Feather.user,
@@ -32,9 +32,6 @@ class _CarListScreenState extends State<CarListScreen> {
       body: Stack(
         children: [
           Container(
-            color: Colors.white,
-          ),
-          Container(
             margin: EdgeInsets.all(8.0),
             height: MediaQuery.of(context).size.height,
             width: 101.0,
@@ -56,10 +53,10 @@ class _CarListScreenState extends State<CarListScreen> {
                       },
                     )).toList(),
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
