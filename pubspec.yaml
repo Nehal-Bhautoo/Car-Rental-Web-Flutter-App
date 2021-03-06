@@ -26,9 +26,7 @@ dependencies:
   rive: ^0.6.7
   responsive_builder: ^0.3.0
   flutter_vector_icons: ^0.3.0
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  google_fonts: ^1.1.2
   cupertino_icons: ^1.0.1
 
 dev_dependencies:
@@ -56,6 +54,7 @@ flutter:
     - assets/rive/marty.riv
     - assets/icons/menu.png
     - assets/icons/sent.png
+    - assets/images/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

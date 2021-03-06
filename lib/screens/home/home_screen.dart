@@ -89,7 +89,7 @@ class _LargeChild extends State<LargeChild> {
                   ),
                   RichText(
                     text: TextSpan(
-                      text: "WellCome To ",
+                      text: "Wellcome To ",
                       style: TextStyle(
                         fontSize: 60,
                         color: Color(0xFF8591B0)
