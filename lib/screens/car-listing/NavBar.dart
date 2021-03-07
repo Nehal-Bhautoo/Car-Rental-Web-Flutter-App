@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -42,6 +43,31 @@ class _NavBarState extends State<NavBar> {
             child: Stack(
               children: [
                 Positioned(
+                  top: 30.0,
+                  left: 30.0,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Cl',
+                        style: GoogleFonts.nunitoSans(
+                            fontWeight: FontWeight.w100,
+                            color: Colors.white,
+                            fontSize: 16.0),
+                      ),
+                      Text(
+                        'Mac',
+                        style: GoogleFonts.nunitoSans(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 16.0),
+                      ),
+                    ],
+                  ),
+                ),
+                Positioned(
+                  top: 110,
                   child: Column(
                     children: icon.map((e) => NavBarItem(
                       icon: e,

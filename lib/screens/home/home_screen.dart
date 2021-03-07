@@ -100,7 +100,8 @@ class _LargeChild extends State<LargeChild> {
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black87))
+                            color: Colors.black87)
+                        )
                       ]
                     ),
                   ),
