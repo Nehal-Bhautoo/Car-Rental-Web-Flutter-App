@@ -15,10 +15,10 @@ class Dashboard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 25.0),
+              margin: EdgeInsets.only(top: 10.0),
               height: 120.0,
               decoration: BoxDecoration(
-                color: Colors.amber,
+                color: Colors.black45,
                 borderRadius: BorderRadius.circular(20.0),
               ),
               alignment: Alignment.centerRight,
@@ -32,14 +32,14 @@ class Dashboard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Hello, Barbara!',
+                          'Hello, User!',
                           style: GoogleFonts.raleway(
                               fontSize: 26.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
                         Text(
-                          'Welcome Back to Clean My Mac',
+                          'Welcome Back to Car Rental',
                           style: GoogleFonts.quicksand(
                               fontSize: 15.0, color: Colors.white),
                         ),
