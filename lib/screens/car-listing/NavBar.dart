@@ -43,11 +43,11 @@ class _NavBarState extends State<NavBar> {
             child: Stack(
               children: [
                 Positioned(
-                  top: 30.0,
-                  left: 30.0,
+                  // top: 30.0,
+                  // left: 30.0,
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Cl',
