@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/car-listing/Dashboard.dart';
 import 'package:car_rental/screens/car-listing/NavBar.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class CarListPageState extends StatelessWidget {
       body: Row(
         children: [
           SideNavbar(),
+          Dashboard()
         ],
       ),
     );
