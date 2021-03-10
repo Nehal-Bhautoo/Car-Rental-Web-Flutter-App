@@ -49,10 +49,13 @@ class Dashboard extends StatelessWidget {
                   Image.asset(
                     'assets/images/logo.png',
                     fit: BoxFit.fill,
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 25.0,
+            ),
           ],
         ),
       ),

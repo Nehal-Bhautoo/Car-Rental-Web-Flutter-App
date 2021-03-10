@@ -11,7 +11,7 @@ class SideNavbar extends StatefulWidget {
   _NavbarState createState() => _NavbarState();
 }
 
-List<bool> selected = [true, false, false, false, false];
+List<bool> selected = [true, false, false, false, false, false];
 
 class _NavbarState extends State<SideNavbar> {
   List<IconData> icon = [
@@ -20,10 +20,11 @@ class _NavbarState extends State<SideNavbar> {
     Feather.bell,
     Feather.alert_circle,
     Feather.mail,
+    Feather.log_out
   ];
 
   void select(int n) {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
       if (i == n) {
         selected[i] = true;
       } else {
