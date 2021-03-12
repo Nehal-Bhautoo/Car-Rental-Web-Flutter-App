@@ -1,6 +1,5 @@
 import 'dart:html';
 
-import 'package:car_rental/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width * 0.5,
@@ -59,73 +59,6 @@ class Dashboard extends StatelessWidget {
             SizedBox(
               height: 25.0,
             ),
-            Row(
-              children: [
-                Text(
-                  'Cars Available',
-                  style: GoogleFonts.nunito(
-                    fontSize: 16.0,
-                    color: mainTextColor,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Container(
-                  height: 20.0,
-                  width: 34.0,
-                  decoration: BoxDecoration(
-                    color: Colors.redAccent,
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.chevron_left,
-                        color: Colors.white,
-                        size: 16.0,
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: Colors.white54,
-                        size: 16.0,
-                      ),
-                    ],
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  height: 32.0,
-                  width: 80.0,
-                  decoration: BoxDecoration(
-                    color: buttonColor,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.calendar_today,
-                        size: 15.0,
-                        color: mainTextColor,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        'Month',
-                        style: GoogleFonts.nunito(
-                          fontSize: 12.0,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
             ),
@@ -134,23 +67,22 @@ class Dashboard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SingleChildScrollView(
                 child: Row(
+                  mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Card(
-                      shadowColor: Colors.black54,
-                      clipBehavior: Clip.antiAlias,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Text(
-                              'Description',
-                              style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                            ),
-                          ),
-                        ],
+                    Text(
+                      'List',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
                       ),
-                    )
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Unique Cars Available for rent',
+                        textAlign: TextAlign.end,
+                      ),
+                    ),
                   ],
                 ),
               ),
