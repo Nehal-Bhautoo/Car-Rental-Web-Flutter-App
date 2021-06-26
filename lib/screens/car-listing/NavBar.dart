@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-final appTheme = ThemeData(
-  primarySwatch: Colors.red,
-);
+final appTheme = ThemeData.dark();
 
 class SideNavbar extends StatefulWidget {
   @override
@@ -40,7 +38,7 @@ class _NavbarState extends State<SideNavbar> {
       height: MediaQuery.of(context).size.height,
       width: 101.0,
       decoration: BoxDecoration(
-        color: Color(0xff332A7C),
+        color: Color(0xff292929),
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Stack(
@@ -72,19 +70,15 @@ class _NavbarState extends State<SideNavbar> {
           Positioned(
             top: 110,
             child: Column(
-              children: icon
-                  .map(
-                    (e) => NavBarItem(
-                  icon: e,
-                  selected: selected[icon.indexOf(e)],
-                  onTap: () {
-                    setState(() {
-                      select(icon.indexOf(e));
-                    });
-                  },
-                ),
-              )
-                  .toList(),
+              children: icon.map((e) => NavBarItem(
+                icon: e,
+                selected: selected[icon.indexOf(e)],
+                onTap: () {
+                  setState(() {
+                    select(icon.indexOf(e));
+                  });
+                },
+              )).toList(),
             ),
           ),
         ],
@@ -132,7 +126,7 @@ class _NavBarItemState extends State<NavBarItem> with TickerProviderStateMixin {
     _anim1 = Tween(begin: 101.0, end: 75.0).animate(_controller1);
     _anim2 = Tween(begin: 101.0, end: 25.0).animate(_controller2);
     _anim3 = Tween(begin: 101.0, end: 50.0).animate(_controller2);
-    _color = ColorTween(end: Color(0xff332a7c), begin: Colors.white)
+    _color = ColorTween(end: Color(0xff4e3bff), begin: Colors.white)
         .animate(_controller2);
 
     _controller1.addListener(() {
@@ -252,7 +246,7 @@ class CurvePainter extends CustomPainter {
     path.lineTo(101, value1 + 40);
     path.close();
 
-    paint.color = Colors.white;
+    paint.color = Color(0xe8303030);
     paint.strokeWidth = 101.0;
     canvas.drawPath(path, paint);
   }

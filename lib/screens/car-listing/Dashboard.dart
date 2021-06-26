@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,10 +7,9 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width * 0.5,
+      height: screenSize.height,
+      width: screenSize.width * 0.5,
       padding: EdgeInsets.symmetric(horizontal: 20.0),
-      color: Colors.white,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,8 +18,12 @@ class Dashboard extends StatelessWidget {
               margin: EdgeInsets.only(top: 10.0),
               height: 120.0,
               decoration: BoxDecoration(
-                color: Colors.black45,
                 borderRadius: BorderRadius.circular(20.0),
+                boxShadow: [BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 5.0,
+                  spreadRadius: 1
+                )]
               ),
               alignment: Alignment.centerRight,
               child: Row(
@@ -37,14 +38,14 @@ class Dashboard extends StatelessWidget {
                         Text(
                           'Hello, User!',
                           style: GoogleFonts.raleway(
-                              fontSize: 26.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                         ),
                         Text(
                           'Welcome Back to Car Rental',
                           style: GoogleFonts.quicksand(
-                              fontSize: 15.0, color: Colors.white),
+                            fontSize: 15.0, color: Colors.white),
                         ),
                       ],
                     ),
@@ -58,9 +59,6 @@ class Dashboard extends StatelessWidget {
             ),
             SizedBox(
               height: 25.0,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
             ),
             Container(
               height: 75.0,

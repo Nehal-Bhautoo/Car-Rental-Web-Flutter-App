@@ -58,6 +58,7 @@ flutter:
     - assets/icons/sent.png
     - assets/images/logo.png
     - assets/cars/bmwX2.png
+    - assets/cars/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

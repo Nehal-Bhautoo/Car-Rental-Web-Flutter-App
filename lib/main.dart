@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Car Rental',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
+      theme: ThemeData.dark(),
       routes: {
         '/': (context) => CarListPage()
       },
