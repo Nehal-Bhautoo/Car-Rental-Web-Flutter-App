@@ -1,4 +1,5 @@
 import 'package:car_rental/widgets/header_widget.dart';
+import 'package:car_rental/widgets/new_car.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     return Row(
       children: <Widget>[
         Expanded(
@@ -86,7 +86,11 @@ class Dashboard extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+                NewCar()
               ],
             ),
           ),
@@ -94,7 +98,7 @@ class Dashboard extends StatelessWidget {
         Expanded(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            decoration: const BoxDecoration(color: Colors.green),
+
           ),
           flex: 3,
         ),

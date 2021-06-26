@@ -13,14 +13,14 @@ class SendBtn extends StatelessWidget {
             Color(0xFF3023AE),
           ],
           begin: Alignment.bottomRight, end: Alignment.topLeft),
-            borderRadius: BorderRadius.circular(20.0),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xFF6078ea).withOpacity(.3),
-                offset: Offset(0.0, 8.0),
-                blurRadius: 8.0
-              )
-            ]
+          borderRadius: BorderRadius.circular(20.0),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xFF6078ea).withOpacity(.3),
+              offset: Offset(0.0, 8.0),
+              blurRadius: 8.0
+            )
+          ]
         ),
         child: Material(
           color: Colors.transparent,
@@ -55,5 +55,5 @@ class SendBtn extends StatelessWidget {
       )
     );
   }
-  
+
 }

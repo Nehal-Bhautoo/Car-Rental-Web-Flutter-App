@@ -54,16 +54,16 @@ class _NavbarState extends State<SideNavbar> {
                 Text(
                   'Cl',
                   style: GoogleFonts.nunitoSans(
-                      fontWeight: FontWeight.w100,
-                      color: Colors.white,
-                      fontSize: 16.0),
+                    fontWeight: FontWeight.w100,
+                    color: Colors.white,
+                    fontSize: 16.0),
                 ),
                 Text(
                   'Mac',
                   style: GoogleFonts.nunitoSans(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                      fontSize: 16.0),
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                    fontSize: 16.0),
                 ),
               ],
             ),

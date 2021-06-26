@@ -9,7 +9,7 @@ class CarListPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Car List',
       theme: ThemeData.dark(),
-      home: CarListPageState(),
+    home: CarListPageState(),
     );
   }
 }
@@ -21,7 +21,7 @@ class CarListPageState extends StatelessWidget {
       body: Row(
         children: <Widget>[
           Expanded(
-            flex: 1,
+            //flex: 1,
             child: SideNavbar()
           ),
           Expanded(
