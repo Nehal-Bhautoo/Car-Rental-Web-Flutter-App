@@ -1,6 +1,6 @@
+import 'package:car_rental/widgets/calendar_widget.dart';
 import 'package:car_rental/widgets/header_widget.dart';
 import 'package:car_rental/widgets/new_car.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +18,7 @@ class Dashboard extends StatelessWidget {
               children: [
                 HeaderWidget(),
                 Container(
-                  margin: EdgeInsets.only(top: 10.0),
+                  margin: EdgeInsets.only(top: 2.0),
                   height: 120.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
@@ -61,7 +61,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: 18.0,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -73,6 +73,7 @@ class Dashboard extends StatelessWidget {
                         Text(
                           'List',
                           style: GoogleFonts.montserrat(
+                            color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                           ),
@@ -81,6 +82,9 @@ class Dashboard extends StatelessWidget {
                           child: Text(
                             'Unique Cars Available for rent',
                             textAlign: TextAlign.end,
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],
@@ -88,7 +92,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: 18.0,
                 ),
                 NewCar()
               ],
@@ -98,7 +102,11 @@ class Dashboard extends StatelessWidget {
         Expanded(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-
+            child: Column(
+              children: [
+                CalendarWidget(),
+              ],
+            ),
           ),
           flex: 3,
         ),

@@ -90,14 +90,6 @@ class _NewCarState extends State<NewCar> {
                 brand: "Available",
                 color: Colors.green
               ),
-              tableRow(
-                context,
-                cars: "Acura",
-                image: "assets/cars/acura_0.png",
-                price: "12345",
-                brand: "Available",
-                color: Colors.green
-              )
             ],
           ),
           Container(
@@ -114,6 +106,7 @@ class _NewCarState extends State<NewCar> {
                 Text(
                   "View All",
                   style: TextStyle(
+                    color: Color(0xff4e3bff),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -161,11 +154,11 @@ class _NewCarState extends State<NewCar> {
                 ),
               ),
               SizedBox(width: 10,),
-              Text(cars)
+              Text(cars, style: TextStyle(color: Colors.white))
             ],
           ),
         ),
-        Text(price),
+        Text(price, style: TextStyle(color: Colors.white)),
         Row(
           children: [
             Container(
@@ -177,7 +170,7 @@ class _NewCarState extends State<NewCar> {
               width: 10,
             ),
             SizedBox(width: 10,),
-            Text(brand),
+            Text(brand, style: TextStyle(color: Colors.white)),
           ],
         ),
         Icon(

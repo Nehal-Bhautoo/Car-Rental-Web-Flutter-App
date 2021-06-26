@@ -15,8 +15,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
           Text(
             "Home",
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
+              color: Color(0xff4e3bff),
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -25,7 +25,6 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             mainAxisSize: MainAxisSize.min,
             children: [
               navigationIcon(icon: Icons.search),
-              navigationIcon(icon: Icons.send),
             ],
           )
         ],

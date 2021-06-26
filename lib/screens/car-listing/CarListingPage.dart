@@ -1,6 +1,7 @@
 import 'package:car_rental/screens/car-listing/Dashboard.dart';
 import 'package:car_rental/screens/car-listing/NavBar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CarListPage extends StatelessWidget {
   @override
@@ -8,7 +9,9 @@ class CarListPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Car List',
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+      ),
     home: CarListPageState(),
     );
   }
