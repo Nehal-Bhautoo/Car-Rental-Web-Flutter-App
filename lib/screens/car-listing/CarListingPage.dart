@@ -19,9 +19,15 @@ class CarListPageState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
-        children: [
-          SideNavbar(),
-          Dashboard()
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: SideNavbar()
+          ),
+          Expanded(
+            flex: 12,
+            child: Dashboard()
+          )
         ],
       ),
     );
