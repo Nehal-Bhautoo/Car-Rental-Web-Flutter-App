@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/car-listing/Dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,10 +23,18 @@ class _NavbarState extends State<SideNavbar> {
     Feather.log_out
   ];
 
+  PageController controller = PageController();
+  int _selectedIndex = 0;
+
   void select(int n) {
     for (int i = 0; i < 7; i++) {
       if (i == n) {
         selected[i] = true;
+        setState(() {
+          _selectedIndex = n;
+        });
+        controller.jumpToPage(n);
+        print(_selectedIndex);
       } else {
         selected[i] = false;
       }
@@ -34,54 +43,82 @@ class _NavbarState extends State<SideNavbar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
-      height: MediaQuery.of(context).size.height,
-      width: 101.0,
-      decoration: BoxDecoration(
-        color: Color(0xff292929),
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-            top: 30.0,
-            left: 30.0,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Cl',
-                  style: GoogleFonts.nunitoSans(
-                    fontWeight: FontWeight.w100,
-                    color: Colors.white,
-                    fontSize: 16.0),
-                ),
-                Text(
-                  'Mac',
-                  style: GoogleFonts.nunitoSans(
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
-                    fontSize: 16.0),
-                ),
+    return Scaffold(
+      body: Row(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
+              height: MediaQuery.of(context).size.height,
+              width: 101.0,
+              decoration: BoxDecoration(
+                color: Color(0xff292929),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 30.0,
+                    left: 30.0,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Cl',
+                          style: GoogleFonts.nunitoSans(
+                            fontWeight: FontWeight.w100,
+                            color: Colors.white,
+                            fontSize: 16.0),
+                        ),
+                        Text(
+                          'Mac',
+                          style: GoogleFonts.nunitoSans(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 110,
+                    child: Column(
+                      children: icon.map((e) => NavBarItem(
+                        icon: e,
+                        selected: selected[icon.indexOf(e)],
+                        onTap: () {
+                          setState(() {
+                            select(icon.indexOf(e));
+                          });
+                        },
+                      )).toList(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 12,
+            child: PageView(
+              controller: controller,
+              children: <Widget>[
+                Dashboard(),
+                new Container(color: Colors.red,),
+                new Container(color: Colors.yellow,),
+                new Container(color: Colors.green,),
+                new Container(color: Colors.orange,),
+                new Container(color: Colors.purple,),
+                new Container(color: Colors.cyan,),
               ],
-            ),
-          ),
-          Positioned(
-            top: 110,
-            child: Column(
-              children: icon.map((e) => NavBarItem(
-                icon: e,
-                selected: selected[icon.indexOf(e)],
-                onTap: () {
-                  setState(() {
-                    select(icon.indexOf(e));
-                  });
-                },
-              )).toList(),
-            ),
-          ),
+              onPageChanged: (page) {
+                setState(() {
+                  _selectedIndex = page;
+                });
+              },
+            )
+          )
         ],
       ),
     );

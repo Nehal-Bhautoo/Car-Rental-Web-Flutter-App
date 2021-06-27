@@ -9,3 +9,5 @@ const Color mainTextColor = Color(0xFF332A7C);
 const Color buttonColor = Color(0xFFf8f8FD);
 const Color rightSideBackColor = Color(0xFFF6F6FC);
 const Color disableColor = Color(0xFFE7E7F7);
+const Color dark = Color(0xFF212121);
+const Color lightGrey = Colors.grey;
