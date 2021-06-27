@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/car-listing/CarList.dart';
 import 'package:car_rental/screens/car-listing/Dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -34,7 +35,6 @@ class _NavbarState extends State<SideNavbar> {
           _selectedIndex = n;
         });
         controller.jumpToPage(n);
-        print(_selectedIndex);
       } else {
         selected[i] = false;
       }
@@ -107,7 +107,7 @@ class _NavbarState extends State<SideNavbar> {
               controller: controller,
               children: <Widget>[
                 Dashboard(),
-                new Container(color: Colors.red,),
+                CarList(),
                 new Container(color: Colors.yellow,),
                 new Container(color: Colors.green,),
                 new Container(color: Colors.orange,),

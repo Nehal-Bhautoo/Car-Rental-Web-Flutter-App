@@ -103,6 +103,7 @@ class Dashboard extends StatelessWidget {
           ),
         ),
         Expanded(
+          flex: 3,
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
@@ -113,7 +114,6 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
-          flex: 3,
         ),
       ],
     );
