@@ -46,6 +46,7 @@ class _NavbarState extends State<SideNavbar> {
     return Scaffold(
       body: Row(
         children: <Widget>[
+          // NavBar
           Expanded(
             child: Container(
               margin: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
@@ -99,6 +100,7 @@ class _NavbarState extends State<SideNavbar> {
               ),
             ),
           ),
+          // Page View
           Expanded(
             flex: 12,
             child: PageView(

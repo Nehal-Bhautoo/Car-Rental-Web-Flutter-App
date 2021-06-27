@@ -34,6 +34,6 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 
 ![Screenshots](screenshots/sign-up.gif)
 
-**Navbar**
+**Dashboard**
 
-![Screenshots](screenshots/navbar.gif)
+![Screenshots](screenshots/Dashboard.PNG)
