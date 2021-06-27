@@ -26,9 +26,9 @@ class _NewCarState extends State<NewCar> {
               Text(
                 "New Car Available",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 22
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white70,
+                  fontSize: 20
                 ),
               ),
             ],
@@ -133,7 +133,7 @@ class _NewCarState extends State<NewCar> {
         text,
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          color: Colors.white
+          color: Colors.white70
         ),
       ),
     );

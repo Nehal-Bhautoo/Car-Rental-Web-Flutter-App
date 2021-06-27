@@ -16,6 +16,7 @@ class ProfileCardWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
                   "assets/user/1.jpg",
+                  fit: BoxFit.fill,
                   height: 60,
                   width: 60,
                 ),
@@ -47,6 +48,9 @@ class ProfileCardWidget extends StatelessWidget {
           profileListTile("Joined Date", "18-Apr-2021"),
           profileListTile("Projects", "32 Active"),
           profileListTile("Accomplishment", "125"),
+          profileListTile("Languages", "5"),
+          profileListTile("Programming Languages", "8"),
+          profileListTile("Preferred Programming  Language", "Java"),
         ],
       ),
     );

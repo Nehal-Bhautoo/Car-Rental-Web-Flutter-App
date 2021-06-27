@@ -44,12 +44,14 @@ class Dashboard extends StatelessWidget {
                               style: GoogleFonts.raleway(
                                 fontSize: 26.0,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                                color: Colors.white
+                              ),
                             ),
                             Text(
                               'Welcome Back to Car Rental',
                               style: GoogleFonts.quicksand(
-                                fontSize: 15.0, color: Colors.white),
+                                fontSize: 15.0, color: Colors.white70
+                              ),
                             ),
                           ],
                         ),
@@ -74,7 +76,7 @@ class Dashboard extends StatelessWidget {
                         Text(
                           'List',
                           style: GoogleFonts.montserrat(
-                            color: Colors.white,
+                            color: Colors.grey,
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                           ),
@@ -84,7 +86,7 @@ class Dashboard extends StatelessWidget {
                             'Unique Cars Available for rent',
                             textAlign: TextAlign.end,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.grey,
                             ),
                           ),
                         ),

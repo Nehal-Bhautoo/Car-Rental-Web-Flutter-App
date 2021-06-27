@@ -16,8 +16,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             "Home",
             style: TextStyle(
               color: Color(0xff4e3bff),
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
             ),
           ),
           Spacer(),
@@ -33,6 +33,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
   }
 
   Widget navigationIcon({icon}) {
-    return Icon(icon, color: Colors.white);
+    return Icon(
+      icon,
+      color: Colors.white
+    );
   }
 }
