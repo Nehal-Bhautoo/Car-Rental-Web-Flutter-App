@@ -90,6 +90,14 @@ class _NewCarState extends State<NewCar> {
                 brand: "Available",
                 color: Colors.green
               ),
+              tableRow(
+                context,
+                cars: "Land Rover",
+                image: "assets/cars/land_rover_0.png",
+                price: "12345",
+                brand: "Available",
+                color: Colors.green
+              ),
             ],
           ),
           Container(

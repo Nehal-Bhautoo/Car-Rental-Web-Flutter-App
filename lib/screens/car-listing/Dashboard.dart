@@ -1,6 +1,7 @@
 import 'package:car_rental/widgets/calendar_widget.dart';
 import 'package:car_rental/widgets/header_widget.dart';
 import 'package:car_rental/widgets/new_car.dart';
+import 'package:car_rental/widgets/profile_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -105,6 +106,8 @@ class Dashboard extends StatelessWidget {
             child: Column(
               children: [
                 CalendarWidget(),
+                SizedBox(height: 20),
+                ProfileCardWidget()
               ],
             ),
           ),

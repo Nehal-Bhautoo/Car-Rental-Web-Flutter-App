@@ -32,6 +32,7 @@ dependencies:
   provider: ^5.0.0
   foldable_sidebar: ^1.0.0
   get: ^4.1.4
+  dio: 1.0.0
 
 dev_dependencies:
   build_runner: ^1.6.2
@@ -63,6 +64,7 @@ flutter:
     - assets/images/logo.png
     - assets/cars/bmwX2.png
     - assets/cars/
+    - assets/user/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
