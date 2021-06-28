@@ -1,3 +1,4 @@
+import 'package:car_rental/widgets/list_car_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -91,22 +92,18 @@ class _CarListState extends State<CarList> {
                         filterButton(
                           Icons.car_rental,
                           "Car Rental",
-                          _hasBeenPressed1
                         ),
-                        filterButton(
+                        filterButton2(
                           Icons.electric_car,
                           "Electric Car",
-                          _hasBeenPressed2
                         ),
                         filterButton(
                           Icons.edit_location,
                           "Nearby",
-                          _hasBeenPressed3
                         ),
                         filterButton(
                           Icons.car_repair,
                           "Car Repair",
-                          _hasBeenPressed4
                         ),
                       ],
                     ),
@@ -122,6 +119,7 @@ class _CarListState extends State<CarList> {
                 SizedBox(
                   height: 10.0,
                 ),
+                Expanded(child: ListCar()),
               ],
             ),
           ),
@@ -141,11 +139,11 @@ class _CarListState extends State<CarList> {
     );
   }
 
-  Widget filterButton(icons, name, _hasBeenPressed) {
+  Widget filterButton(icons, name) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        onPrimary: _hasBeenPressed ? Colors.grey : Color(0xe8303030),
-        primary: _hasBeenPressed ? Colors.grey : Color(0xe8303030),
+        onPrimary: _hasBeenPressed1 ? Colors.grey : Color(0xe8303030),
+        primary: _hasBeenPressed1 ? Colors.grey : Color(0xe8303030),
         padding: EdgeInsets.symmetric(horizontal: 16),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -157,7 +155,7 @@ class _CarListState extends State<CarList> {
       ),
       onPressed: () {
         setState(() {
-          _hasBeenPressed = !_hasBeenPressed;
+          _hasBeenPressed1 = !_hasBeenPressed1;
         });
       },
       child: Container(
@@ -169,12 +167,12 @@ class _CarListState extends State<CarList> {
               height: 35,
               width: 35,
               decoration: BoxDecoration(
-                color: _hasBeenPressed ? Color(0xff4e3bff) : Colors.black26,
+                color: _hasBeenPressed1 ? Color(0xff4e3bff) : Colors.black26,
                 shape: BoxShape.circle,
               ),
               child: Icon(
                 icons,
-                color: _hasBeenPressed ? Colors.white70 : Colors.grey,
+                color: _hasBeenPressed1 ? Colors.white70 : Colors.grey,
                 size: 20.0,
               ),
             ),
@@ -184,7 +182,58 @@ class _CarListState extends State<CarList> {
             Text(
               name,
               style: TextStyle(
-                color: _hasBeenPressed ? Colors.white70 : Colors.grey
+                color: _hasBeenPressed1 ? Colors.white70 : Colors.grey
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+  Widget filterButton2(icons, name) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        onPrimary: _hasBeenPressed2 ? Colors.grey : Color(0xe8303030),
+        primary: _hasBeenPressed2 ? Colors.grey : Color(0xe8303030),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+        ),
+        side: BorderSide(
+            width: 1,
+            color: Colors.grey
+        ),
+      ),
+      onPressed: () {
+        setState(() {
+          _hasBeenPressed2 = !_hasBeenPressed2;
+        });
+      },
+      child: Container(
+        height: 45,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                color: _hasBeenPressed2 ? Color(0xff4e3bff) : Colors.black26,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                icons,
+                color: _hasBeenPressed2 ? Colors.white70 : Colors.grey,
+                size: 20.0,
+              ),
+            ),
+            SizedBox(
+              width: 6.0,
+            ),
+            Text(
+              name,
+              style: TextStyle(
+                  color: _hasBeenPressed2 ? Colors.white70 : Colors.grey
               ),
             )
           ],
