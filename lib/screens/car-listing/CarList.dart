@@ -142,15 +142,15 @@ class _CarListState extends State<CarList> {
   Widget filterButton(icons, name) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        onPrimary: _hasBeenPressed1 ? Colors.grey : Color(0xe8303030),
-        primary: _hasBeenPressed1 ? Colors.grey : Color(0xe8303030),
+        onPrimary: _hasBeenPressed1 ? Color(0xe8454545) : Color(0xe8303030),
+        primary: _hasBeenPressed1 ? Color(0xe8454545) : Color(0xe8303030),
         padding: EdgeInsets.symmetric(horizontal: 16),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
         side: BorderSide(
           width: 1,
-          color: Colors.grey
+          color: Color(0xe8454545)
         ),
       ),
       onPressed: () {
@@ -193,15 +193,15 @@ class _CarListState extends State<CarList> {
   Widget filterButton2(icons, name) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        onPrimary: _hasBeenPressed2 ? Colors.grey : Color(0xe8303030),
-        primary: _hasBeenPressed2 ? Colors.grey : Color(0xe8303030),
+        onPrimary: _hasBeenPressed2 ? Color(0xe8454545) : Color(0xe8303030),
+        primary: _hasBeenPressed2 ? Color(0xe8454545) : Color(0xe8303030),
         padding: EdgeInsets.symmetric(horizontal: 16),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
         side: BorderSide(
             width: 1,
-            color: Colors.grey
+            color: Color(0xe8454545)
         ),
       ),
       onPressed: () {

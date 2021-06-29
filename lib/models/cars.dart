@@ -8,6 +8,7 @@ class CarItem {
   final String gearbox;
   final String fuel;
   final String brand;
+  final String rating;
 
   CarItem({
     @required this.name,
@@ -16,7 +17,8 @@ class CarItem {
     @required this.color,
     @required this.gearbox,
     @required this.fuel,
-    @required this.brand});
+    @required this.brand,
+    @required this.rating});
 }
 
 class CarList {
@@ -32,7 +34,9 @@ CarList allCars = CarList(cars: [
       color: "white",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Honda"),
+      brand: "Honda",
+      rating: "4.5"
+  ),
   CarItem(
       name: "BMW 8 Series",
       price: 123,
@@ -40,7 +44,8 @@ CarList allCars = CarList(cars: [
       color: "blue",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "BMW"),
+      brand: "BMW",
+      rating: "4.5"),
   CarItem(
       name: "Mercedes AMG",
       price: 123,
@@ -48,7 +53,8 @@ CarList allCars = CarList(cars: [
       color: "gray",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Mercedes"),
+      brand: "Mercedes",
+      rating: "4.5"),
   CarItem(
       name: "R35 GTR",
       price: 123,
@@ -56,7 +62,8 @@ CarList allCars = CarList(cars: [
       color: "white",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Nissan"),
+      brand: "Nissan",
+      rating: "4.5"),
   CarItem(
       name: "Range Rover",
       price: 123,
@@ -64,7 +71,8 @@ CarList allCars = CarList(cars: [
       color: "red",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Rover"),
+      brand: "Rover",
+      rating: "4.5"),
   CarItem(
       name: "Camaro",
       price: 123,
@@ -72,7 +80,8 @@ CarList allCars = CarList(cars: [
       color: "yellow",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Chevrolet"),
+      brand: "Chevrolet",
+      rating: "4.5"),
   CarItem(
       name: "488 Spider",
       price: 123,
@@ -80,7 +89,8 @@ CarList allCars = CarList(cars: [
       color: "blue",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Ferrari"),
+      brand: "Ferrari",
+      rating: "4.5"),
   CarItem(
       name: "Acura",
       price: 123,
@@ -88,7 +98,8 @@ CarList allCars = CarList(cars: [
       color: "dark blue",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Acura"),
+      brand: "Acura",
+      rating: "4.5"),
   CarItem(
       name: "Citroen",
       price: 123,
@@ -96,7 +107,8 @@ CarList allCars = CarList(cars: [
       color: "Cherry Red",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Citroen"),
+      brand: "Citroen",
+      rating: "4.5"),
   CarItem(
       name: "Focus",
       price: 123,
@@ -104,7 +116,8 @@ CarList allCars = CarList(cars: [
       color: "white",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Ford"),
+      brand: "Ford",
+      rating: "4.5"),
   CarItem(
       name: "Honda",
       price: 123,
@@ -112,7 +125,8 @@ CarList allCars = CarList(cars: [
       color: "white",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Honda"),
+      brand: "Honda",
+      rating: "4.5"),
   CarItem(
       name: "Land Rover",
       price: 123,
@@ -120,7 +134,8 @@ CarList allCars = CarList(cars: [
       color: "dark grey",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Rover"),
+      brand: "Rover",
+      rating: "4.5"),
   CarItem(
       name: "Alfa Romeo",
       price: 123,
@@ -128,6 +143,7 @@ CarList allCars = CarList(cars: [
       color: "white",
       gearbox: "automatic",
       fuel: "petrol",
-      brand: "Alfa"),
+      brand: "Alfa",
+      rating: "4.5"),
 ]
 );
