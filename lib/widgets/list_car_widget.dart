@@ -29,6 +29,39 @@ class _ListCarState extends State<ListCar> {
             elevation: 5,
             child: Padding(
               padding: EdgeInsets.all(7),
+              child: Stack(
+                children: <Widget> [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Stack(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15.0),
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Image.asset(
+                                        allCars.cars[i].image,
+                                        width: 130.0,
+                                        height: 120.0
+                                      )
+                                    )
+                                  )
+                                ]
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ]
+              )
             ),
           ),
         ),

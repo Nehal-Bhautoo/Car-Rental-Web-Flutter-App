@@ -37,3 +37,5 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 **Dashboard**
 
 ![Screenshots](screenshots/Dashboard.PNG)
+
+![Screenshots](screenshots/Dashboard2.PNG)

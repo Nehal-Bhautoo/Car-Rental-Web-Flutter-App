@@ -15,10 +15,10 @@ List<bool> selected = [true, false, false, false, false, false, false];
 
 class _NavbarState extends State<SideNavbar> {
   List<IconData> icon = [
+    Feather.home,
     Feather.list,
     Feather.user,
     Feather.bell,
-    Feather.alert_circle,
     Feather.mail,
     Feather.settings,
     Feather.log_out
