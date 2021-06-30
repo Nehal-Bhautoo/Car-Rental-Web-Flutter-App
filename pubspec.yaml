@@ -33,6 +33,7 @@ dependencies:
   foldable_sidebar: ^1.0.0
   get: ^4.1.4
   dio: 1.0.0
+  google_maps: ^5.1.0
 
 dev_dependencies:
   build_runner: ^1.6.2

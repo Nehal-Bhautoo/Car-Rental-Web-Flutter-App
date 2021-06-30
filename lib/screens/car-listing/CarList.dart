@@ -1,3 +1,4 @@
+import 'package:car_rental/widgets/google_maps_widget.dart';
 import 'package:car_rental/widgets/list_car_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -127,12 +128,18 @@ class _CarListState extends State<CarList> {
         Expanded(
           flex: 3,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: Column(
-              children: [
-                Container()
-              ],
-            ),
+            padding: EdgeInsets.fromLTRB(10,10,10,10),
+            height: double.maxFinite,
+            width: double.maxFinite,
+            child: Card(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              color: Color(0xff262626),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              ),
+              child: GoogleMap(),
+            )
           ),
         )
       ],
