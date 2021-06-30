@@ -50,6 +50,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
                           Text(
                             "Sign-In",
                             style: TextStyle(
+                              color: Colors.white,
                               fontSize: 40.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -110,7 +111,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
                               TextSpan(
                                 text: "Don't have an account?",
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white70,
                                   fontSize: 18,
                                 )
                               ),
@@ -158,7 +159,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
           title,
           style: TextStyle(
             fontSize: 15,
-            color: Colors.black
+            color: Colors.white70
           ),
         ),
         TextFormField(

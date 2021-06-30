@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xFFF8FBFF),
+        color: Color(0xe8303030),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -82,17 +82,15 @@ class _LargeChild extends State<LargeChild> {
                       fontSize: 60,
                       fontWeight: FontWeight.bold,
                       fontFamily: "Montserrat-Regular",
-                      color: Color(
-                          0xFF8591B0
-                      )
+                      color: Colors.white70
                     )
                   ),
                   RichText(
                     text: TextSpan(
-                      text: "Wellcome To ",
+                      text: "Welcome To ",
                       style: TextStyle(
                         fontSize: 60,
-                        color: Color(0xFF8591B0)
+                          color: Colors.white70
                       ),
                       children: [
                         TextSpan(
@@ -100,14 +98,20 @@ class _LargeChild extends State<LargeChild> {
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black87)
+                            color: Color(0xff4e3bff)
+                          )
                         )
                       ]
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 12.0, top: 20),
-                    child: Text("LET’S EXPLORE THE WORLD"),
+                    child: Text(
+                      "LET’S EXPLORE THE WORLD",
+                      style: TextStyle(
+                          color: Colors.white70
+                      )
+                    ),
                   ),
                   SizedBox(
                     height: 40,
@@ -155,22 +159,25 @@ class _SmallChildState extends State<SmallChild> {
             Text(
               "Hello!",
               style: TextStyle(
-                  fontSize: 40,
-                  color: Color(0xFF8591B0),
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Montserrat-Regular"),
+                fontSize: 40,
+                color: Color(0xFFE2E3E9),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Montserrat-Regular"
+              ),
             ),
             RichText(
               text: TextSpan(
                 text: 'WellCome To ',
-                style: TextStyle(fontSize: 40, color: Color(0xFF8591B0)),
+                style: TextStyle(fontSize: 40, color: Color(0xFFE2E3E9)),
                 children: <TextSpan>[
                   TextSpan(
-                      text: 'Car Rental',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40,
-                          color: Colors.black87)),
+                    text: 'Car Rental',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                        color: Color(0xff4e3bff)
+                    )
+                  ),
                 ],
               ),
             ),

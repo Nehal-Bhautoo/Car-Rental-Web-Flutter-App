@@ -15,24 +15,27 @@ class Search extends StatelessWidget {
       child: Container(
         height: 60,
         decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black12, offset: Offset(0, 8), blurRadius: 8)
-            ]),
+          color: Color(0xe8303030),
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12, offset: Offset(0, 8), blurRadius: 8)
+          ]
+        ),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Expanded(
-                  flex: 8,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Your Email Address'),
-                  )),
+                flex: 8,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Your Email Address'
+                  ),
+                )
+              ),
               Expanded(
                 flex: 2,
                 child: SendBtn(),

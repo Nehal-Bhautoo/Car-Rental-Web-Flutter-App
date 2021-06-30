@@ -40,89 +40,92 @@ class _SignupDesktopState extends State<SignupDesktop> {
               child: Padding(padding: EdgeInsets.all(35.0),
               child: Row(
                 children: <Widget>[
-                  Expanded(child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Row(
-                          children: [
-                            Text(
-                              "Sign-Up",
-                              style: TextStyle(
-                                fontSize: 40.0,
-                                fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Row(
+                            children: [
+                              Text(
+                                "Sign-Up",
+                                style: TextStyle(
+                                  fontSize: 40.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Center(
-                              child: Icon(
-                                Icons.login_rounded,
-                                color: Colors.deepPurple,
-                                size: 50,
+                              Center(
+                                child: Icon(
+                                  Icons.login_rounded,
+                                  color: Colors.deepPurple,
+                                  size: 50,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 30.0),
-                        customTextField("Username", "username", Icons.account_circle, false),
-                        SizedBox(height: 30.0),
-                        customTextField("Email", "you@example.com", Icons.mail, false),
-                        SizedBox(height: 30.0),
-                        customTextField("Password", "Enter Password", Icons.lock, true),
-                        SizedBox(height: 30.0),
-                        customTextField("Confirm Password", "Confirm Password", Icons.lock, true),
-                        SizedBox(height: 30.0),
-                        Container(
-                          width: double.infinity,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
+                            ],
                           ),
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+                          SizedBox(height: 25.0),
+                          customTextField("Username", "username", Icons.account_circle, false),
+                          SizedBox(height: 25.0),
+                          customTextField("Email", "you@example.com", Icons.mail, false),
+                          SizedBox(height: 25.0),
+                          customTextField("Password", "Enter Password", Icons.lock, true),
+                          SizedBox(height: 25.0),
+                          customTextField("Confirm Password", "Confirm Password", Icons.lock, true),
+                          SizedBox(height: 25.0),
+                          Container(
+                            width: double.infinity,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
                             ),
-                            onPressed: () {},
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
                               ),
+                              onPressed: () {},
+                              child: Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600
+                                ),
+                              )
                             )
+                          ),
+                          SizedBox(height: 20.0),
+                          Center(
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Already have an account?",
+                                    style: TextStyle(
+                                      color: Colors.white70,
+                                      fontSize: 18,
+                                    )
+                                  ),
+                                  TextSpan(
+                                    text: "Sign-In",
+                                    style: TextStyle(
+                                      color: Colors.deepPurple,
+                                      fontSize: 18,
+                                    )
+                                  ),
+                                ]
+                              )
+                            ),
                           )
-                        ),
-                        SizedBox(height: 25.0),
-                        Center(
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: "Already have an account?",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  )
-                                ),
-                                TextSpan(
-                                  text: "Sign-In",
-                                  style: TextStyle(
-                                    color: Colors.deepPurple,
-                                    fontSize: 18,
-                                  )
-                                ),
-                              ]
-                            )
-                          ),
-                        )
-                      ],
-                    ),
-                  )),
+                        ],
+                      ),
+                    )
+                  ),
                   SizedBox(height: 23.0),
                   Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Center(
                       child: Material(
                         borderRadius: BorderRadius.circular(17.0),
@@ -147,7 +150,7 @@ class _SignupDesktopState extends State<SignupDesktop> {
           title,
           style: TextStyle(
             fontSize: 15,
-            color: Colors.black
+            color: Colors.white70
           ),
         ),
         TextFormField(

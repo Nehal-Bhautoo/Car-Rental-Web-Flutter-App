@@ -11,7 +11,13 @@ class NavBar extends StatelessWidget {
     return navLinks.map((text) {
       return Padding(
         padding: EdgeInsets.only(left: 18),
-        child: Text(text, style: TextStyle(fontFamily: "Montserrat-Bold")),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: "Montserrat-Bold"
+          )
+        ),
       );
     }).toList();
   }
@@ -47,7 +53,13 @@ class NavBar extends StatelessWidget {
               SizedBox(
                 width: 16,
               ),
-              Text("Car Rental", style: TextStyle(fontSize: 26))
+              Text(
+                "Car Rental",
+                style: TextStyle(
+                  fontSize: 26,
+                  color: Colors.white,
+                )
+              )
             ],
           ),
           if(!ResponsiveLayout.isSmallScreen(context))
