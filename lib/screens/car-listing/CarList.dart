@@ -97,11 +97,11 @@ class _CarListState extends State<CarList> {
                           Icons.electric_car,
                           "Electric Car",
                         ),
-                        filterButton(
+                        filterButton3(
                           Icons.edit_location,
                           "Nearby",
                         ),
-                        filterButton(
+                        filterButton4(
                           Icons.car_repair,
                           "Car Repair",
                         ),
@@ -234,6 +234,108 @@ class _CarListState extends State<CarList> {
               name,
               style: TextStyle(
                   color: _hasBeenPressed2 ? Colors.white70 : Colors.grey
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+  Widget filterButton3(icons, name) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        onPrimary: _hasBeenPressed3 ? Color(0xe8454545) : Color(0xe8303030),
+        primary: _hasBeenPressed3 ? Color(0xe8454545) : Color(0xe8303030),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+        ),
+        side: BorderSide(
+            width: 1,
+            color: Color(0xe8454545)
+        ),
+      ),
+      onPressed: () {
+        setState(() {
+          _hasBeenPressed3 = !_hasBeenPressed3;
+        });
+      },
+      child: Container(
+        height: 45,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                color: _hasBeenPressed3 ? Color(0xff4e3bff) : Colors.black26,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                icons,
+                color: _hasBeenPressed3 ? Colors.white70 : Colors.grey,
+                size: 20.0,
+              ),
+            ),
+            SizedBox(
+              width: 6.0,
+            ),
+            Text(
+              name,
+              style: TextStyle(
+                  color: _hasBeenPressed3 ? Colors.white70 : Colors.grey
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+  Widget filterButton4(icons, name) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        onPrimary: _hasBeenPressed4 ? Color(0xe8454545) : Color(0xe8303030),
+        primary: _hasBeenPressed4 ? Color(0xe8454545) : Color(0xe8303030),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+        ),
+        side: BorderSide(
+            width: 1,
+            color: Color(0xe8454545)
+        ),
+      ),
+      onPressed: () {
+        setState(() {
+          _hasBeenPressed4 = !_hasBeenPressed4;
+        });
+      },
+      child: Container(
+        height: 45,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                color: _hasBeenPressed4 ? Color(0xff4e3bff) : Colors.black26,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                icons,
+                color: _hasBeenPressed4 ? Colors.white70 : Colors.grey,
+                size: 20.0,
+              ),
+            ),
+            SizedBox(
+              width: 6.0,
+            ),
+            Text(
+              name,
+              style: TextStyle(
+                  color: _hasBeenPressed4 ? Colors.white70 : Colors.grey
               ),
             )
           ],

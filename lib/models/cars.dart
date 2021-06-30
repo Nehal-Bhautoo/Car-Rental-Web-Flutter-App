@@ -41,7 +41,7 @@ CarList allCars = CarList(cars: [
       location: "Port-Louis"
   ),
   CarItem(
-      name: "BMW 8 Series",
+      name: "8 Series",
       price: 123,
       image: "assets/cars/m8.png",
       color: "blue",
@@ -51,7 +51,7 @@ CarList allCars = CarList(cars: [
       rating: "4.5",
       location: "Port-Louis"),
   CarItem(
-      name: "Mercedes AMG",
+      name: "AMG",
       price: 123,
       image: "assets/cars/mer.png",
       color: "gray",

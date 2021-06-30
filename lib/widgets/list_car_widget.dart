@@ -22,214 +22,186 @@ class _ListCarState extends State<ListCar> {
           height: 180,
           width: double.maxFinite,
           child: Card(
-            shadowColor: Color(0xff181818),
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            color: Color(0xff262626),
+            elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            color: Color(0xff292929),
-            elevation: 5,
-            child: Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Image.asset(
-                      allCars.cars[i].image,
-                      width: 180,
-                      height: 120,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                allCars.cars[i].brand,
-                                style: TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500
-                                ),
-                              )
-                            ],
-                          ),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset(
+                    allCars.cars[i].image,
+                    width: 180,
+                    height: 120,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        allCars.cars[i].brand,
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500
                         ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 0, top: 4.5),
-                              child: Icon(
-                                Icons.circle,
-                                color: Colors.grey,
-                                size: 8,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2),
-                              child: Text(
-                                allCars.cars[i].name,
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 5, top: 4.5),
-                              child: Icon(
-                                Icons.circle,
-                                color: Colors.grey,
-                                size: 8,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2),
-                              child: Text(
-                                allCars.cars[i].fuel,
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 5, top: 4.5),
-                              child: Icon(
-                                Icons.circle,
-                                color: Colors.grey,
-                                size: 8,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 0),
-                              child: Text(
-                                allCars.cars[i].color,
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 0, top: 4),
-                              child: Icon(
-                                Icons.star,
-                                color: Colors.yellow,
-                                size: 8,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2),
-                              child: Text(
-                                allCars.cars[i].rating,
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 0, bottom: 5),
-                              child: Icon(
-                                Icons.location_on,
-                                color: Colors.grey,
-                                size: 20,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2),
-                              child: Text(
-                                allCars.cars[i].location,
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 60.0,
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
                         children: [
-                          filterButton(
-                            Icons.favorite,
+                          Icon(
+                            Icons.circle,
+                            color: Colors.grey,
+                            size: 10,
+                          ),
+                          SizedBox(
+                            width: 5.0
+                          ),
+                          Text(
+                            allCars.cars[i].name,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w200
+                            ),
+                          ),
+                          SizedBox(
+                            width: 5.0
+                          ),
+                          Icon(
+                            Icons.circle,
+                            color: Colors.grey,
+                            size: 10,
+                          ),
+                          SizedBox(
+                              width: 5.0
+                          ),
+                          Text(
+                            allCars.cars[i].fuel,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w200
+                            ),
+                          ),
+                          SizedBox(
+                            width: 5.0
+                          ),
+                          Icon(
+                            Icons.circle,
+                            color: Colors.grey,
+                            size: 10,
+                          ),
+                          SizedBox(
+                              width: 5.0
+                          ),
+                          Text(
+                            allCars.cars[i].color,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w200
+                            ),
+                          ),
+                        ]
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow,
+                            size: 12,
+                          ),
+                          SizedBox(
+                              width: 5.0
+                          ),
+                          Text(
+                            allCars.cars[i].rating,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w200
+                            ),
                           ),
                         ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            color: Colors.grey,
+                            size: 12,
+                          ),
+                          SizedBox(
+                              width: 5.0
+                          ),
+                          Text(
+                            allCars.cars[i].location,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w200
+                            ),
+                          ),
+                        ],
+                      )
+                    ]
+                  )
                 ),
-              ),
-            )
-          ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 0, 0, 85),
+                          child: favoriteButton(Icons.favorite),
+                        ),
+                        Text(
+                          allCars.cars[i].price.toString() + "/weeks",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w200
+                          ),
+                        )
+                      ],
+                    )
+                  ),
+                )
+              ]
+            ),
+          )
         ),
       ),
       ),
     );
   }
 
-  Widget filterButton(icons) {
+  Widget favoriteButton(icons) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         onPrimary: _hasBeenPressed2 ? Color(0xFF3023AE) : Color(0xe8303030),
