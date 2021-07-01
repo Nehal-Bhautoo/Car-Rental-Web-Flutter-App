@@ -16,8 +16,10 @@ class GoogleMap extends StatelessWidget {
 
       final elem = DivElement()
         ..id = htmlId
-        ..style.width = "100%"
+        ..style.width = "99%"
         ..style.height = "100%"
+        ..style.borderRadius = "20px"
+        ..style.backgroundColor = "transparent"
         ..style.border = 'none';
 
       final map = GMap(elem, mapOptions);

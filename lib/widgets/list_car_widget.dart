@@ -24,6 +24,7 @@ class _ListCarState extends State<ListCar> {
           child: Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
             color: Color(0xff262626),
+            shadowColor: Color(0xff161616),
             elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),

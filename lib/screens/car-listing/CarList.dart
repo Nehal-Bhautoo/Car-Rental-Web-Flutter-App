@@ -138,7 +138,10 @@ class _CarListState extends State<CarList> {
               shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
               ),
-              child: GoogleMap(),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GoogleMap(),
+              ),
             )
           ),
         )
