@@ -5,7 +5,7 @@ import '../utils/responsiveLayout.dart';
 
 class NavBar extends StatelessWidget {
 
-  final navLinks = ["Home", "Cars", "Features", "Contact"];
+  final navLinks = ["Features", "Contact"];
 
   List<Widget> navItem() {
     return navLinks.map((text) {

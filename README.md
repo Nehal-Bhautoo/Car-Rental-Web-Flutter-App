@@ -24,15 +24,15 @@ Rive has various implementation, but the one used in this project [Rive-Flutter]
 
 **Landing Page**
 
-![Screenshots](screenshots/lnading.gif)
+![Screenshots](screenshots/Landing.PNG)
 
 **Login**
 
-![Screenshots](screenshots/login.gif)
+![Screenshots](screenshots/login.PNG)
 
 **Sign-Up**
 
-![Screenshots](screenshots/sign-up.gif)
+![Screenshots](screenshots/signup.PNG)
 
 **Dashboard**
 

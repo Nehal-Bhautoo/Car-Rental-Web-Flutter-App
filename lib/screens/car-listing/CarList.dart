@@ -133,7 +133,7 @@ class _CarListState extends State<CarList> {
             width: double.maxFinite,
             child: Card(
               clipBehavior: Clip.antiAliasWithSaveLayer,
-              color: Color(0xff262626),
+              color: Colors.transparent,
               elevation: 5,
               shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
