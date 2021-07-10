@@ -131,18 +131,7 @@ class _CarListState extends State<CarList> {
             padding: EdgeInsets.fromLTRB(10,10,10,10),
             height: double.maxFinite,
             width: double.maxFinite,
-            child: Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              color: Colors.transparent,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: GoogleMap(),
-              ),
-            )
+            child: GoogleMap()
           ),
         )
       ],
